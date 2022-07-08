@@ -65,13 +65,6 @@ namespace LibraryApp.Views
             }
         }
 
-
-        private void PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            Regex regex = new Regex("[^0-9]+");
-            e.Handled = regex.IsMatch(e.Text);
-        }
-
         public List<Book> booksList { get; set; } = new List<Book>();
 
         public void Refresh()
@@ -157,6 +150,12 @@ namespace LibraryApp.Views
                 }
 
             }
+        }
+
+        private void PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
         }
     }
 }
