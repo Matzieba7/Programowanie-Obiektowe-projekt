@@ -23,5 +23,10 @@ namespace LibraryApp.Views
         {
             InitializeComponent();
         }
+
+        private void submitButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

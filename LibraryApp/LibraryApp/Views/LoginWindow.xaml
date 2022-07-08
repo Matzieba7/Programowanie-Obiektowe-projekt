@@ -31,7 +31,7 @@
                    FontWeight="Bold" FontSize="22">
                    Username
         </TextBlock>
-        <TextBox Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center"
+        <TextBox x:Name="usernameTxtBox" Grid.Row="2" HorizontalAlignment="Center"
                  VerticalAlignment="Center" 
                  Width="150">
         </TextBox>
@@ -41,13 +41,17 @@
                    FontWeight="Bold" FontSize="22">
                    Password
         </TextBlock>
-        <TextBox Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" 
+        <TextBox x:Name="paswordTxtBox" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" 
                  VerticalAlignment="Center" 
                  Width="150">
         </TextBox>
 
         <Button x:Name="submitButton" Grid.Column="0" Grid.Row="5" Content="Submit"
                 Width="100" Height="40" HorizontalAlignment="Center" 
-                 VerticalAlignment="Center"/>
+                 VerticalAlignment="Center" Click="submitButton_Click">
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
