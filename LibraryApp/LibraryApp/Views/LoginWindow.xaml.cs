@@ -26,7 +26,27 @@ namespace LibraryApp.Views
 
         private void submitButton_Click(object sender, RoutedEventArgs e)
         {
+            var Username = usernameTxtBox.Text.Trim();
+            var Password = passwordTxtBox.Password.Trim();
 
+            using (DataContext context = new DataContext())
+            {
+                if (context.Users.Any(user => user.Username == Username && user.Password == Password))
+                {
+                    OpenMainWindow();
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong credentials!");
+                }
+            }
+        }
+
+        public void OpenMainWindow()
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
         }
     }
 }
