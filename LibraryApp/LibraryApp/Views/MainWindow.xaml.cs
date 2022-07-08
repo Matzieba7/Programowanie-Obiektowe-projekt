@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryApp.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,26 @@ namespace LibraryApp
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void bookButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new BooksWindow());
+        }
+
+        private void authorButton_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new AuthorsWindow());
+        }
+
+        private void genreButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void userButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
