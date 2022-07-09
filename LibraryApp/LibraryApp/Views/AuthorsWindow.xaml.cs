@@ -37,18 +37,19 @@ namespace LibraryApp.Views
                 {
                     var fullName = FullNameTextBox.Text.Trim();
 
-                    if (context.Authors.Any(author => author.FullName != fullName))
+                    if (context.Authors.Any(author => author.FullName == fullName))
+                    {                       
+                        MessageBox.Show("Author already exists!");
+                    }
+                    else
                     {
                         if (fullName != null)
                         {
                             context.Authors.Add(new DatabaseTables.Author() { FullName = fullName });
                             context.SaveChanges();
+                            Refresh();
                         }
-                        Refresh();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Author already exists!");
+                        
                     }
                 }
                 else
@@ -99,7 +100,7 @@ namespace LibraryApp.Views
 
                         context.Remove(author);
                         context.SaveChanges();
-                        Refresh();                        
+                        Refresh();
                     }
 
                 }
@@ -140,6 +141,7 @@ namespace LibraryApp.Views
                     MessageBox.Show("Author's name must be provided");
                 }
             }
+        }
     }
+
 }
-    }

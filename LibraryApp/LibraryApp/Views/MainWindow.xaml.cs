@@ -43,6 +43,7 @@ namespace LibraryApp
 
         private void userButton_Click(object sender, RoutedEventArgs e)
         {
+            mainFrame.Navigate(new UsersWindow());
 
         }
     }
