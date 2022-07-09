@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LibraryApp.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="450"
+      d:DesignHeight="450" FontSize="20" FontFamily="Segoe UI Light"
       Title="Genres" Height="400" Width="334">
     <Grid Background="White" Margin="0,0,0,0">
 
@@ -18,16 +18,14 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID" Width="30"  DisplayMemberBinding="{Binding ID}"/>
-                    <GridViewColumn Header= "Name" Width="150" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header= "Name" Width="290" DisplayMemberBinding="{Binding Name}"/>
                 </GridView>
             </ListView.View>
         </ListView>
 
-        <CheckBox x:Name="EnableCheckBox" Content="Editing enabled"  HorizontalAlignment="Left" Margin="10,213,0,0" VerticalAlignment="Top"/>
-
-        <Grid x:Name="EditGrid" IsEnabled="{Binding ElementName=EnableCheckBox,Path=IsChecked}" Margin="3,240,0,0"  HorizontalAlignment="Stretch" VerticalAlignment="Top">
+        <Grid x:Name="EditGrid"  Margin="3,220,0,0"  HorizontalAlignment="Stretch" VerticalAlignment="Top">
             <Label Content="Name" HorizontalAlignment="Left" Margin="3,0,0,0"   VerticalAlignment="Top"/>
-            <TextBox Name="NameTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Name,Mode=OneWay}" HorizontalAlignment="Left"  Margin="70,0,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
+            <TextBox Name="NameTextBox" Text="{Binding ElementName=ItemList ,Path=SelectedItem.Name,Mode=OneWay}" HorizontalAlignment="Left" Width="150" Height="36.6" VerticalAlignment="Top" Margin="94,0,0,0"/>
         </Grid>
 
         <Button x:Name="CreateButton" HorizontalAlignment="Left" Width="70" Margin="18,340,0,0" VerticalAlignment="Top" Click="CreateButton_Click" >
@@ -48,7 +46,7 @@
             </StackPanel>
         </Button>
 
-        <Button x:Name="DeleteButton" HorizontalAlignment="Left" Width="70" Margin="190,340,0,0"  VerticalAlignment="Top" Click="DeleteButton_Click" >
+        <Button x:Name="DeleteButton" HorizontalAlignment="Left" Width="69" Margin="190,340,0,0"  VerticalAlignment="Top" Click="DeleteButton_Click" >
             <Button.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
             </Button.Background>

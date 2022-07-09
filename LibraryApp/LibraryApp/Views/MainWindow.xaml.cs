@@ -38,7 +38,7 @@ namespace LibraryApp
 
         private void genreButton_Click(object sender, RoutedEventArgs e)
         {
-
+            mainFrame.Navigate(new GenresWindow());
         }
 
         private void userButton_Click(object sender, RoutedEventArgs e)

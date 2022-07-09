@@ -15,25 +15,30 @@
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
         <ToolBar Width="800" Grid.Row="0" HorizontalAlignment="Center" ToolBarTray.IsLocked="True">
+            <ToolBar.Resources>
+                <Style TargetType="{x:Type ToolBarPanel}">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                </Style>
+            </ToolBar.Resources>
             <ToolBar.Background>
                 <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
             </ToolBar.Background>
-            <Button x:Name="bookButton" Content="Books" Height="80" Width="100" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Click="bookButton_Click" >
+            <Button x:Name="bookButton" Content="Books" Height="90" Width="100" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Click="bookButton_Click" >
                 <Button.Background>
                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="authorButton" Content="Authors" Height="80" Width="100" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Click="authorButton_Click" >
+            <Button x:Name="authorButton" Content="Authors" Height="90" Width="100" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Click="authorButton_Click" >
                 <Button.Background>
                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="genreButton" Content="Genres" Height="80" Width="100" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Click="genreButton_Click" >
+            <Button x:Name="genreButton" Content="Genres" Height="90" Width="100" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Click="genreButton_Click" >
                 <Button.Background>
                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="userButton" Content="Users" Height="80" Width="100" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Click="userButton_Click" >
+            <Button x:Name="userButton" Content="Users" Height="90" Width="100" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Click="userButton_Click" >
                 <Button.Background>
                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
                 </Button.Background>

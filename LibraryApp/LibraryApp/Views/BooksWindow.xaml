@@ -4,33 +4,31 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LibraryApp.Views"
-      mc:Ignorable="d" 
-      Title="Books" Height="400" Width="800">
+      mc:Ignorable="d" FontSize="20" FontFamily="Segoe UI Light"
+      Title="Books" Height="400" Width="800"> 
     <Grid Background="White" Height="400" Width="800">
 
         <ListView Name="BooksList" Margin="5,5,5,0" Height="195" VerticalAlignment="Top">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID" Width="30"  DisplayMemberBinding="{Binding ID}"/>
-                    <GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Header="Pages" Width="150" DisplayMemberBinding="{Binding Pages}"/>
-                    <GridViewColumn Header="AuthorID" Width="150" DisplayMemberBinding="{Binding AuthorID}"/>
-                    <GridViewColumn Header="GenreID" Width="150" DisplayMemberBinding="{Binding GenreID}"/>
+                    <GridViewColumn Header="Name" Width="170" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Pages" Width="170" DisplayMemberBinding="{Binding Pages}"/>
+                    <GridViewColumn Header="AuthorID" Width="170" DisplayMemberBinding="{Binding AuthorID}"/>
+                    <GridViewColumn Header="GenreID" Width="170" DisplayMemberBinding="{Binding GenreID}"/>
                 </GridView>
             </ListView.View>
         </ListView>
 
-        <CheckBox x:Name="EnableCheckBox" Content="Editing enabled"  HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top"/>
-
-        <Grid x:Name="EditGrid" IsEnabled="{Binding ElementName=EnableCheckBox,Path=IsChecked}" Margin="3,240,0,0"  HorizontalAlignment="Stretch" VerticalAlignment="Top">
+        <Grid x:Name="EditGrid" Margin="3,240,0,0"  HorizontalAlignment="Stretch" VerticalAlignment="Top">
             <Label Content="Name" HorizontalAlignment="Left" Margin="3,0,0,0"   VerticalAlignment="Top"/>
             <Label Content="Pages" HorizontalAlignment="Left" Margin="3,40,0,0" VerticalAlignment="Top"/>
             <Label Content="AuthorID" HorizontalAlignment="Left" Margin="250,0,0,0"   VerticalAlignment="Top"/>
             <Label Content="GenreID" HorizontalAlignment="Left" Margin="250,40,0,0" VerticalAlignment="Top"/>
-            <TextBox Name="NameTextBox" Text="{Binding ElementName=BooksList ,Path=SelectedItem.Name,Mode=OneWay}" HorizontalAlignment="Left"  Margin="70,0,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
-            <TextBox Name="PagesTextBox" PreviewTextInput="PreviewTextInput"  Text="{Binding ElementName=BooksList ,Path=SelectedItem.Pages,Mode=OneWay}" HorizontalAlignment="Left" Margin="70,40,0,0" Width="150" Height="26" VerticalAlignment="Top" />
-            <TextBox Name="AuthorIDTextBox" PreviewTextInput="PreviewTextInput" Text="{Binding ElementName=BooksList ,Path=SelectedItem.AuthorID,Mode=OneWay}" HorizontalAlignment="Left"  Margin="350,0,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
-            <TextBox Name="GenreIDTextBox" PreviewTextInput="PreviewTextInput" Text="{Binding ElementName=BooksList ,Path=SelectedItem.GenreID,Mode=OneWay}" HorizontalAlignment="Left" Margin="350,40,0,0" Width="150" Height="26" VerticalAlignment="Top"/>
+            <TextBox Name="NameTextBox" Text="{Binding ElementName=BooksList ,Path=SelectedItem.Name,Mode=OneWay}" HorizontalAlignment="Left"  Margin="70,0,0,0" Width="150" Height="36.6" VerticalAlignment="Top"/>
+            <TextBox Name="PagesTextBox" PreviewTextInput="PreviewTextInput"  Text="{Binding ElementName=BooksList ,Path=SelectedItem.Pages,Mode=OneWay}" HorizontalAlignment="Left" Margin="70,40,0,0" Width="150" Height="36.6" VerticalAlignment="Top" />
+            <TextBox Name="AuthorIDTextBox" PreviewTextInput="PreviewTextInput" Text="{Binding ElementName=BooksList ,Path=SelectedItem.AuthorID,Mode=OneWay}" HorizontalAlignment="Left"  Margin="350,0,0,0" Width="150" Height="36.6" VerticalAlignment="Top"/>
+            <TextBox Name="GenreIDTextBox" PreviewTextInput="PreviewTextInput" Text="{Binding ElementName=BooksList ,Path=SelectedItem.GenreID,Mode=OneWay}" HorizontalAlignment="Left" Margin="350,40,0,0" Width="150" Height="36.6" VerticalAlignment="Top"/>
 
         </Grid>
 

@@ -85,7 +85,7 @@ namespace LibraryApp.Views
         {
             using (DataContext context = new DataContext())
             {
-                Author selectedGenre = GenreList.SelectedItem as Author;
+                Genre selectedGenre = GenreList.SelectedItem as Genre;
 
                 if (selectedGenre != null)
                 {
