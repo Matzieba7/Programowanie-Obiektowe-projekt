@@ -81,7 +81,7 @@ namespace LibraryApp.Views
                         Pages = item.Pages,
                         AuthorID = item.AuthorID,
                         GenreID = item.GenreID,
-                    });
+                    }); ;
                 }
 
             }
