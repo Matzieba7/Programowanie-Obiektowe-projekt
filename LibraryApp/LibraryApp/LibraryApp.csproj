@@ -13,6 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\GenresWindow .xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AuthorsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="Views\GenresWindow .xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\AuthorsWindow.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
